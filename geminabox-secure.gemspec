@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
-  s.name              = 'geminabox'
+  s.name              = 'geminabox-secure'
   s.version           = '0.3.1'
-  s.summary           = 'Really simple rubygem hosting'
-  s.description       = 'A sinatra based gem hosting app, with client side gem push style functionality.'
-  s.author            = 'Tom Lea'
-  s.email             = 'contrib@tomlea.co.uk'
+  s.summary           = 'Really simple secure rubygem hosting'
+  s.description       = 'Gem in a box with basic HTTP authentication and forced SSL, designed for use on Heroku or other cloud-based hosting services'
+  s.author            = 'Judd Blair'
+  s.email             = 'judd+contrib@euclidelements.com'
   s.homepage          = 'http://tomlea.co.uk/p/gem-in-a-box'
 
   s.has_rdoc          = true
@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency('sinatra')
   s.add_dependency('builder')
+  s.add_dependency('rack-ssl-enforcer')
 end

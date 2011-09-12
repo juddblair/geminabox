@@ -1,9 +1,9 @@
 require 'uri'
 require 'yaml'
 
-class Gem::Commands::InaboxCommand < Gem::Command
+class Gem::Commands::InaboxsecureCommand < Gem::Command
   def description
-    'Push a gem up to your GemInABox'
+    'Push a gem up to your GemInABox-Secure'
   end
 
   def arguments
@@ -15,9 +15,9 @@ class Gem::Commands::InaboxCommand < Gem::Command
   end
 
   def initialize
-    super 'inabox', description
+    super 'inaboxsecure', description
 
-    add_option('-c', '--configure', "Configure GemInABox") do |value, options|
+    add_option('-c', '--configure', "Configure GemInABox-Secure") do |value, options|
       options[:configure] = true
     end
 

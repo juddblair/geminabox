@@ -4,4 +4,4 @@ require 'rubygems/command'
 require 'rubygems/dependency'
 require 'rubygems/version_option'
 
-Gem::CommandManager.instance.register_command :inabox
+Gem::CommandManager.instance.register_command :inaboxsecure

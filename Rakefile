@@ -4,7 +4,7 @@ require "rdoc/task"
 
 task :default => :package
 
-Gem::PackageTask.new(eval(File.read("geminabox.gemspec"))) do |pkg|
+Gem::PackageTask.new(eval(File.read("geminabox-secure.gemspec"))) do |pkg|
 end
 
 Rake::RDocTask.new do |rd|

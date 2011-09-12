@@ -7,8 +7,10 @@ require "rubygems/indexer"
 
 require 'hostess'
 
+require 'rack-ssl-enforcer'
 
-class Geminabox < Sinatra::Base
+
+class GeminaboxSecure < Sinatra::Base
   enable :static, :methodoverride
 
   set :public, File.join(File.dirname(__FILE__), *%w[.. public])
@@ -16,6 +18,10 @@ class Geminabox < Sinatra::Base
   set :views, File.join(File.dirname(__FILE__), *%w[.. views])
   set :allow_replace, false
   use Hostess
+  use Rack::SslEnforcer
+  use Rack::Auth::Basic, "Restricted Area" do |username, password|
+    [username, password] == [ENV['GEMBOX_USER'],ENV['GEMBOX_PASSWORD']]
+  end
 
   class << self
     def disallow_replace?
