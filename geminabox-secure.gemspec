@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.description       = 'Gem in a box with basic HTTP authentication and forced SSL, designed for use on Heroku or other cloud-based hosting services'
   s.author            = 'Judd Blair'
   s.email             = 'judd+contrib@euclidelements.com'
-  s.homepage          = 'http://tomlea.co.uk/p/gem-in-a-box'
+  s.homepage          = 'https://github.com/juddblair/geminabox'
 
   s.has_rdoc          = true
   s.extra_rdoc_files  = %w[README.markdown]
