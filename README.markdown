@@ -15,7 +15,7 @@ Create a config.ru as follows:
     require "rubygems"
     require "geminabox-secure"
 
-    Geminabox.data = "/var/geminabox-data" # …or wherever
+    GeminaboxSecure.data = "/var/geminabox-data" # …or wherever
     run GeminaboxSecure
 
 Set environment variables for your username and password: GEMBOX_USER and GEMBOX_PASSWORD, respectively. 
