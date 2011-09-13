@@ -29,7 +29,7 @@ class GeminaboxSecure < Sinatra::Base
     end
   end
 
-  autoload :GemVersionCollection, "geminabox/gem_version_collection"
+  autoload :GemVersionCollection, "geminabox-secure/gem_version_collection"
 
   get '/' do
     @gems = load_gems
@@ -53,7 +53,7 @@ class GeminaboxSecure < Sinatra::Base
   end
 
   post '/upload' do
-    return "Please ensure #{File.expand_path(Geminabox.data)} is writable by the geminabox web server." unless File.writable? Geminabox.data
+    return "Please ensure #{File.expand_path(GeminaboxSecure.data)} is writable by the geminabox web server." unless File.writable? GeminaboxSecure.data
     unless params[:file] && (tmpfile = params[:file][:tempfile]) && (name = params[:file][:filename])
       @error = "No file selected"
       return erb(:upload)
@@ -66,7 +66,7 @@ class GeminaboxSecure < Sinatra::Base
     dest_filename = File.join(options.data, "gems", File.basename(name))
 
 
-    if Geminabox.disallow_replace? and File.exist?(dest_filename)
+    if GeminaboxSecure.disallow_replace? and File.exist?(dest_filename)
       existing_file_digest = Digest::SHA1.file(dest_filename).hexdigest
       tmpfile_digest = Digest::SHA1.file(tmpfile.path).hexdigest
 

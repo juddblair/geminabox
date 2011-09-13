@@ -1,4 +1,4 @@
-class Geminabox::GemVersionCollection
+class GeminaboxSecure::GemVersionCollection
   include Enumerable
 
   def initialize(initial_gems = [])
