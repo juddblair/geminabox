@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = 'geminabox-secure'
-  s.version           = '0.3.5'
+  s.version           = '0.3.6'
   s.summary           = 'Really simple secure rubygem hosting'
   s.description       = 'Gem in a box with basic HTTP authentication and forced SSL, designed for use on Heroku or other cloud-based hosting services'
   s.author            = 'Judd Blair'
