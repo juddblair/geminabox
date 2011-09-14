@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = 'geminabox-secure'
-  s.version           = '0.3.6'
+  s.version           = '0.3.7'
   s.summary           = 'Really simple secure rubygem hosting'
   s.description       = 'Gem in a box with basic HTTP authentication and forced SSL, designed for use on Heroku or other cloud-based hosting services'
   s.author            = 'Judd Blair'
@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
   s.require_paths     = ['lib']
 
   s.add_dependency('sinatra')
-  s.add_dependency('builder')
+  s.add_dependency('builder','~> 2.1')
   s.add_dependency('rack-ssl-enforcer')
 end
